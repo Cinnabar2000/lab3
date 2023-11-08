@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>{{post.title}}</title>
+	<link rel="stylesheet" href= "{{STATIC_URL}}/static/article.css">
+</head>
+<body>
+	<div class="header">
+		<p>
+		<img src="http://1.fotos.web.sapo.io/i/B8413660f/19047645_RLF2C.jpeg">
+		<a class="link" href= "http://127.0.0.1:8000">Все статьи</a>
+		</p>
+	</div>
+<div class="archive">
+		<h1 class="post-title">{{post.title}}</h1>
+		<div class="article-info">
+		<h2>
+			<div class="article-author">{{ post.author.username }}</div>
+		</h2>
+			<div class="article-created- date">{{ post.created_date }}</div>
+		</div>
+		<p class="article-text">{{ post.text }}</p>
+</div>
+</body>
