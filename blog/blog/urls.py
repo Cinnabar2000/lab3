@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from articles.views import archive, get_article
+from articles.views import archive, get_article, create_post
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', archive, name='Articles'),
     path('article/<int:article_id>', get_article, name='get_article'),
+    path('article/new/', create_post, name='create_post'),
 ]
